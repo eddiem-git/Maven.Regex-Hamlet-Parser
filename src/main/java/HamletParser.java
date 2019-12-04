@@ -68,7 +68,7 @@ public class HamletParser {
     }
     public String replaceHoratio(String text){
         //instantiating Pattern and making is equal to HORATIO
-        Pattern p = Pattern.compile("HORATIO");
+        Pattern p = Pattern.compile("HORATIO", Pattern.CASE_INSENSITIVE);
         Matcher m = p.matcher(text);
 
         //replaces all HORATIO with TARIQ if checking is true;

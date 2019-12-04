@@ -29,7 +29,7 @@ public class HamletParserTest {
     public void testChangeHoratioToTariq() {
         //given
         String test = "Hello Howdy Horatio HORATIO";
-        String expected = "Hello Howdy Horatio TARIQ";
+        String expected = "Hello Howdy TARIQ TARIQ";
         //when
         String actual = hamletParser.replaceHoratio(test);
         //then
@@ -38,7 +38,13 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHamletToLeon() {
-        String test = "";
+        //given
+        String test = "Hello Howdy Hamlet HAMLET";
+        String expected = "Hello Howdy LEON LEON";
+        //when
+        String actual = hamletParser.replaceHamlet(test);
+        //then
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
